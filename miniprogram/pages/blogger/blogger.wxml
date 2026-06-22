@@ -1,0 +1,51 @@
+<view class="page">
+  <view wx:if="{{loading}}" class="loading-text">加载中...</view>
+
+  <block wx:if="{{!loading and blogger}}">
+    <view class="profile-card card">
+      <image class="profile-avatar" src="{{blogger.profile_pic_url}}" mode="aspectFill" />
+      <view class="profile-name">{{blogger.full_name}}</view>
+      <view class="profile-username">@{{blogger.username}}</view>
+      <view class="profile-bio" wx:if="{{blogger.biography}}">{{blogger.biography}}</view>
+      <view class="profile-stats">
+        <view class="stat-item">
+          <text class="stat-num">{{blogger.media_count}}</text>
+          <text class="stat-label">帖子</text>
+        </view>
+        <view class="stat-item">
+          <text class="stat-num">{{blogger.followers_count}}</text>
+          <text class="stat-label">粉丝</text>
+        </view>
+        <view class="stat-item">
+          <text class="stat-num">{{blogger.following_count}}</text>
+          <text class="stat-label">关注</text>
+        </view>
+      </view>
+      <view class="last-update">更新于 {{blogger.last_updated}}</view>
+    </view>
+
+    <view class="section-title">帖子 ({{posts.length}})</view>
+
+    <view class="post-grid">
+      <view
+        class="post-item"
+        wx:for="{{posts}}"
+        wx:key="shortcode"
+        bindtap="onTapPost"
+        data-shortcode="{{item.shortcode}}"
+      >
+        <image class="post-image" src="{{item.display_url}}" mode="aspectFill" />
+        <view class="post-overlay" wx:if="{{item.is_video}}">
+          <text class="play-icon">▶</text>
+        </view>
+        <view class="post-stats">
+          <text>❤ {{item.likes_count}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{posts.length == 0}}" class="empty-text">暂无帖子数据</view>
+  </block>
+
+  <view wx:if="{{!loading and !blogger}}" class="empty-text">未找到博主信息</view>
+</view>

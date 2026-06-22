@@ -1,0 +1,115 @@
+.page {
+  padding: 20rpx;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 24rpx;
+}
+
+.profile-avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-size: 36rpx;
+  font-weight: 700;
+  margin-top: 20rpx;
+  color: #262626;
+}
+
+.profile-username {
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 4rpx;
+}
+
+.profile-bio {
+  font-size: 26rpx;
+  color: #444;
+  margin-top: 16rpx;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 80%;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 60rpx;
+  margin-top: 28rpx;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-num {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #262626;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 4rpx;
+}
+
+.last-update {
+  font-size: 22rpx;
+  color: #ccc;
+  margin-top: 16rpx;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6rpx;
+  padding: 0 4rpx;
+}
+
+.post-item {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.post-image {
+  width: 100%;
+  height: 100%;
+}
+
+.post-overlay {
+  position: absolute;
+  top: 8rpx;
+  right: 8rpx;
+  background: rgba(0,0,0,0.5);
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-icon {
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.post-stats {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.6));
+  padding: 20rpx 8rpx 8rpx;
+  font-size: 22rpx;
+  color: #fff;
+}

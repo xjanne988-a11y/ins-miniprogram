@@ -1,0 +1,19 @@
+﻿{
+  "pages": [
+    "pages/index/index",
+    "pages/blogger/blogger",
+    "pages/post/post"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "Ins 精选",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f5f5f5"
+  },
+  "usingComponents": {
+    "blogger-card": "/components/blogger-card/blogger-card",
+    "post-grid": "/components/post-grid/post-grid"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

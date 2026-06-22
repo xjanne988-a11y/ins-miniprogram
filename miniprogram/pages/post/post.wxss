@@ -1,0 +1,71 @@
+.page {
+  padding: 20rpx;
+}
+
+.post-card {
+  padding: 0 0 24rpx;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 24rpx;
+}
+
+.poster-avatar {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+}
+
+.poster-info {
+  margin-left: 16rpx;
+}
+
+.poster-name {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #262626;
+}
+
+.poster-username {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.post-media {
+  width: 100%;
+}
+
+.post-actions {
+  display: flex;
+  gap: 40rpx;
+  padding: 20rpx 24rpx;
+}
+
+.action-item {
+  font-size: 28rpx;
+  color: #262626;
+}
+
+.post-caption {
+  padding: 0 24rpx;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+.caption-user {
+  font-weight: 600;
+  color: #262626;
+  margin-right: 12rpx;
+}
+
+.caption-text {
+  color: #444;
+}
+
+.post-time {
+  padding: 16rpx 24rpx 0;
+  font-size: 22rpx;
+  color: #999;
+}

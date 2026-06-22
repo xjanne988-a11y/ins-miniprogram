@@ -1,0 +1,32 @@
+<view class="page">
+  <view wx:if="{{loading}}" class="loading-text">加载中...</view>
+
+  <block wx:if="{{!loading and post}}">
+    <view class="post-card card">
+      <view class="post-header">
+        <image class="poster-avatar" src="{{post.blogger_pic}}" mode="aspectFill" />
+        <view class="poster-info">
+          <view class="poster-name">{{post.full_name}}</view>
+          <view class="poster-username">@{{post.username}}</view>
+        </view>
+      </view>
+
+      <image class="post-media" src="{{post.display_url}}" mode="widthFix" wx:if="{{!post.is_video}}" />
+      <video class="post-media" src="{{post.media_url}}" controls wx:if="{{post.is_video}}" />
+
+      <view class="post-actions">
+        <text class="action-item">❤ {{post.likes_count}}</text>
+        <text class="action-item">💬 {{post.comments_count}}</text>
+      </view>
+
+      <view class="post-caption" wx:if="{{post.caption}}">
+        <text class="caption-user">@{{post.username}}</text>
+        <text class="caption-text">{{post.caption}}</text>
+      </view>
+
+      <view class="post-time">{{post.taken_at}}</view>
+    </view>
+  </block>
+
+  <view wx:if="{{!loading and !post}}" class="empty-text">帖子不存在</view>
+</view>
